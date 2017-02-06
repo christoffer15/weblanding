@@ -1,0 +1,305 @@
+body {
+  transition: opacity 100ms ease-in;
+}
+
+#settings h2 {
+  font-size: 32px;
+}
+
+#settings h3 {
+  font-size: 22px;
+  margin-left: -5px;
+  padding-bottom: 5px;
+}
+
+#settings .setting {
+  padding: 15px 10px;
+}
+
+#settings .setting p, #settings .setting a, #settings .setting li {
+  font-family: sans-serif;
+  padding-bottom: 5px;
+}
+
+#settings .setting:first-of-type {
+  padding-top: 2px;
+}
+
+#settings .setting:not(:first-of-type) {
+  border-top: 1px solid #e5e5e5;
+  padding-top: 10px;
+}
+
+#settings.about .setting p, #settings.about .setting li a {
+  font-size: 14px;
+}
+
+#settings .setting li {
+  font-size: 13px;
+}
+
+#settings.about .setting ul {
+  list-style: circle;
+  margin-left: 20px;
+}
+
+#settings.themes .img {
+  cursor: pointer;
+  height: 160px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: height 0.125s ease-in-out;
+}
+
+#settings.themes .img:hover {
+  transition-delay: 450ms;
+  height: 260px;
+}
+
+#settings.themes .selected {
+  margin-top: 5px;
+  font-size: 12px;
+  font-family: sans-serif;
+  padding: 2px 2px 2px;
+  margin-left: 2px;
+  border: 1px solid rgb(204, 204, 204);
+  border-radius: 4px;
+  vertical-align: middle;
+  background-color: rgb(219, 219, 219);
+  color: rgb(0, 0, 0);
+}
+
+#settings.themes .madeBy {
+  margin-top: 5px;
+  font-size: 15px;
+  font-family: sans-serif;
+  font-style: italic;
+}
+
+#settings.about .copyright {
+  font-family: sans-serif;
+  font-size: 12px;
+  text-align: center;
+  margin-bottom: 3px;
+}
+
+strong {
+  font-weight: bold;
+}
+
+#heroes-selection {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#heroes-selection.hide {
+  opacity: 0;
+}
+
+#heroes-selection .hero-selector {
+  flex: 1;
+  position: relative;
+  height: 156px;
+  min-width: 85px;
+  max-width: 85px;
+  margin: 5px 10px;
+  cursor: pointer;
+  overflow: hidden;
+  border: 2px solid hsla(0, 0%, 100%, .4);
+  background-color: rgb(220, 220, 220);
+  transition: transform 0.15s ease-in-out, border-color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+}
+
+#heroes-selection .hero-selector.selected, #heroes-selection .hero-selector.selected:hover, #heroes-selection .hero-selector:hover {
+  transform: scale(1.3, 1.3);
+  z-index: 2;
+  border-color: #fff;
+  background-color: rgb(255, 193, 7);
+}
+
+#heroes-selection .hero-selector.selected {
+  transform: scale(1.2, 1.2);
+}
+
+#heroes-selection .hero-selector.selected .hero-name, #heroes-selection .hero-selector:hover .hero-name {
+  color: #1a325e;
+  background-color: rgb(243, 243, 243);
+  padding: 10px 0 8px 0;
+}
+
+#heroes-selection .hero-selector.selected {
+  border-color: #ffa500;
+  z-index: 1;
+}
+
+#heroes-selection .hero-selector img {
+  max-width: 100%;
+}
+
+#heroes-selection .hero-selector .hero-name {
+  position: absolute;
+  bottom: 0;
+  padding: 10px 0;
+  width: 100%;
+  background-color: rgb(40, 53, 79);
+  font-size: 18px;
+  color: #d0d0dc;
+  text-align: center;
+  font-style: italic;
+  transition: background-color 0.15s ease-in-out;
+  transition-delay: 0.07s;
+}
+
+#heroes-selection .hero-selector .hero-name .hero-progress {
+  height: 0;
+  opacity: 0;
+  transition: height 125ms ease-in-out, opacity 150ms ease-in-out;
+  font-family: Futura, century gothic, arial, sans-serif;
+  text-transform: uppercase;
+  font-size: 0.65em;
+  font-style: normal;
+}
+
+#heroes-selection .hero-selector.selected .hero-name .hero-progress, #heroes-selection .hero-selector:hover .hero-name .hero-progress {
+  opacity: 1;
+  height: 20px;
+}
+
+#heroes-selection .hero-selector .hero-name .hero-progress .hero-progress-bar {
+  height: 4px;
+  background-color: rgba(124, 127, 132, 0.2);
+  margin: 2px 0;
+}
+
+#heroes-selection .hero-selector .hero-name .hero-progress .hero-progress-bar .hero-progress-bar-inner {
+  height: 100%;
+  background-color: #ffa500;
+  transition: width 0.15s ease-in-out;
+}
+
+#heroes-selection .hero-selector.hero-selector-global img {
+  height: 70px;
+  margin: 16px 8px;
+}
+
+.view-mode-hero #image-preview {
+  top: -15px;
+  height: 380px;
+}
+
+/* Overwatch CSS Loader by CCG @ https://codepen.io/CCG/pen/KrANmJ */
+.loader {
+  transform: scale(0.7);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 160px;
+  height: 160px;
+  margin: -80px 0px 0px -80px;
+  background-color: transparent;
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 100ms ease-in;
+}
+
+.hexagon-container {
+  position: relative;
+  top: 33px;
+  left: 41px;
+  border-radius: 50%;
+}
+
+.hexagon {
+  position: absolute;
+  width: 40px;
+  height: 23px;
+  background-color: #556C82;
+}
+.hexagon:before {
+  content: "";
+  position: absolute;
+  top: -10.5px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 11px solid #556C82;
+}
+.hexagon:after {
+  content: "";
+  position: absolute;
+  top: 22.5px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 11px solid #556C82;
+}
+
+.hexagon.hex_1 {
+  top: 0px;
+  left: 0px;
+  animation: Animasearch 3s ease-in-out infinite;
+  animation-delay: 0.21429s;
+}
+
+.hexagon.hex_2 {
+  top: 0px;
+  left: 42px;
+  animation: Animasearch 3s ease-in-out infinite;
+  animation-delay: 0.42857s;
+}
+
+.hexagon.hex_3 {
+  top: 36px;
+  left: 63px;
+  animation: Animasearch 3s ease-in-out infinite;
+  animation-delay: 0.64286s;
+}
+
+.hexagon.hex_4 {
+  top: 72px;
+  left: 42px;
+  animation: Animasearch 3s ease-in-out infinite;
+  animation-delay: 0.85714s;
+}
+
+.hexagon.hex_5 {
+  top: 72px;
+  left: 0px;
+  animation: Animasearch 3s ease-in-out infinite;
+  animation-delay: 1.07143s;
+}
+
+.hexagon.hex_6 {
+  top: 36px;
+  left: -21px;
+  animation: Animasearch 3s ease-in-out infinite;
+  animation-delay: 1.28571s;
+}
+
+.hexagon.hex_7 {
+  top: 36px;
+  left: 21px;
+  animation: Animasearch 3s ease-in-out infinite;
+  animation-delay: 1.5s;
+}
+
+@keyframes Animasearch {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  15%,
+  50% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  65% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
